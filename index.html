@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Smart</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7520d132f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fonts -->
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon_io/favicon-16x16.png"
+    />
+  </head>
+  <body dark-mode>
+    <header darker>
+      <h1 highlight id="header-text" class="header-text">Shop Smart</h1>
+      <section>
+        <div class="toggle-container">
+          <input type="checkbox" class="toggle" id="check" />
+          <label for="check" id="toggleSwitch"></label>
+        </div>
+      </section>
+    </header>
+    <main dark-mode>
+      <h1 to-yellow>Shop Smart</h1>
+    </main>
+    <nav>
+      <ul class="navbuttons-container" darker>
+        <li class="all-button" data-category-button>
+          <span highlight>All PRODUCTS</span>
+        </li>
+        <li class="womens-category" data-category-button>
+          <span highlight>women's clothing</span>
+        </li>
+        <li data-category-button><span highlight>men's clothing</span></li>
+        <li data-category-button><span highlight>jewelery</span></li>
+        <li data-category-button><span highlight>electronics</span></li>
+      </ul>
+    </nav>
+    <section class="content-container" dark-mode>
+      <div class="product-list" id="product-list" dark-mode></div>
+    </section>
+    <button class="fixed-shopping-cart-button" id="openModal" to-dark>
+      <i class="fa-solid fa-bag-shopping"></i>
+    </button>
+    <section class="shopping-cart-modal" id="shopping-cart-modal">
+      <article class="modal-container" to-grey>
+        <button class="close-modal-button" id="closeModal">X</button>
+        <h1 class="cart-heading">Smart Cart</h1>
+        <section class="cart-and-checkout-container">
+          <div class="ul-container">
+            <ul class="cart-items-list"></ul>
+          </div>
+          <div class="checkout-container" to-grey>
+            <h1 class="checkout" highlight>Checkout</h1>
+            <div class="checkout-content">
+              <div class="quantity-price-button-container">
+                <p class="quantity-container" highlight>
+                  Number of items: <span id="numberOfItemsContent"></span>
+                </p>
+                <p class="price-container" highlight>
+                  Price: <span id="totalContent"></span>
+                </p>
+                <a class="purchase-button" id="purchase-button">Purchase</a>
+                <div>
+                  <button class="purchase-button remove-all">
+                    Remove All Items
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </section>
+    <section class="purchase-popup-modal" id="purchase-popup-modal">
+      <div class="popup-modal-container" to-grey>
+        <button class="close-popup-button" id="close-popup-button">X</button>
+        <div class="popup-content-container">
+          <div class="popup-text-container">
+            <h3 class="popup-main-text">Order Succesfully Placed!</h3>
+            <p class="popup-text">
+              please prepare
+              <span class="amount-to-pay" id="amount-to-pay"></span>, upon
+              delivery
+            </p>
+          </div>
+          <div class="popup-button-container">
+            <button class="popup-button" id="close-popup-button">
+              Return to Homepage
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h1></h1>
+    </footer>
+    <script src="main.js" async></script>
+  </body>
+</html>
