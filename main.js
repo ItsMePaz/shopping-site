@@ -71,9 +71,17 @@ const filterItemsByCategory = (items, category) => {
 
 // API Calling
 const fetchNewProduct1 = async () => {
-  const response1 = fetch("https://fakestoreapi.com/products");
-  const data1 = (await response1).json();
-  return data1;
+  try {
+    const response1 = await fetch("https://fakestoreapi.com/products");
+    if (!response1.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data1 = await response1.json();
+    return data1;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
 };
 const updateItemsList = async (product) => {
   product.forEach(function (product) {
